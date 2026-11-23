@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login & Registration</title>
+    <!-- Menggunakan Font Awesome untuk ikon ID (User) dan Password (Lock) -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #63b395; /* Warna hijau latar belakang */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            gap: 40px;
+        }
+
+        /* Container Utama Form */
+        .form-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 360px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* === 1. STYLE UNTUK LOGIN FORM === */
+        .login-header {
+            background-color: #63b395; /* Header menyatu sedikit lebih gelap/sama dengan latar */
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Modifikasi khusus box login agar ada efek warna di atasnya */
+        .login-card {
+            background-color: #72c2a4; 
+            padding: 0;
+        }
+        .login-card .brand-header {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+        .login-card .form-body {
+            background-color: #ffffff;
+            padding: 25px 20px;
+        }
+
+        /* Group Input dengan Ikon di Login */
+        .input-group-icon {
+            display: flex;
+            margin-bottom: 15px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .input-group-icon .icon-box {
+            background-color: #63b395;
+            color: #ffffff;
+            width: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        .input-group-icon input {
+            flex: 1;
+            border: none;
+            padding: 12px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        /* === 2. STYLE UNTUK REGISTRATION FORM === */
+        .register-card {
+            padding: 30px 25px;
+        }
+        .register-card h2 {
+            color: #333333;
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+        /* Garis bawah di teks Registration */
+        .register-card h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 30px;
+            height: 2px;
+            background-color: #63b395;
+        }
+
+        /* Input biasa untuk Register */
+        .input-standard {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            outline: none;
+            font-size: 14px;
+        }
+        .input-standard:focus, .input-group-icon input:focus {
+            border-color: #63b395;
+        }
+
+        /* === TAMPILAN UTAMA TOMBOL & LINK === */
+        .btn-submit {
+            width: 100%;
+            background-color: #63b395;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #529e82;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666666;
+        }
+        .form-footer a {
+            color: #63b395;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- KARTU FORM 1: CUSTOMER LOGIN -->
+    <div class="form-card login-card">
+        <div class="brand-header">Customer Login</div>
+        <div class="form-body">
+            <form action="#" method="POST">
+                <div class="input-group-icon">
+                    <div class="icon-box"><i class="fa-solid fa-user"></i></div>
+                    <input type="text" placeholder="ID" required>
+                </div>
+                
+                <div class="input-group-icon">
+                    <div class="icon-box"><i class="fa-solid fa-lock"></i></div>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Login</button>
+                
+                <div class="form-footer">
+                    Not a member? <a href="#">Signup now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- KARTU FORM 2: REGISTRATION -->
+    <div class="form-card register-card">
+        <h2>Registration</h2>
+        <form action="#" method="POST">
+            <input type="text" class="input-standard" placeholder="Enter your ID" required>
+            <input type="text" class="input-standard" placeholder="Enter your Full Name" required>
+            <input type="email" class="input-standard" placeholder="Enter your Email" required>
+            <input type="password" class="input-standard" placeholder="Enter your Password" required>
+
+            <button type="submit" class="btn-submit">Register Now</button>
+            
+            <div class="form-footer">
+                Already have an account? <a href="#">Login now</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

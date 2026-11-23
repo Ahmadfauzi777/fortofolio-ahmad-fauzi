@@ -1,0 +1,107 @@
+\<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account Form - Pink Theme</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <!-- Header -->
+    <div class="form-header">
+        <h2>Create Account</h2>
+    </div>
+
+    <!-- Body / Form -->
+    <form action="#" method="POST">
+        <div class="form-body">
+            <div class="form-grid">
+                
+                <!-- First name -->
+                <div class="form-group">
+                    <label for="first_name">First name <span class="required">*</span></label>
+                    <input type="text" id="first_name" placeholder="enter your first name">
+                </div>
+
+                <!-- Last name -->
+                <div class="form-group">
+                    <label for="last_name">Last name</label>
+                    <input type="text" id="last_name" placeholder="enter your last name">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group full-width">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="enter your email">
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input type="password" id="password" placeholder="enter your password">
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password <span class="required">*</span></label>
+                    <input type="password" id="confirm_password" placeholder="enter your password again">
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div class="options-group">
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                </div>
+
+                <!-- Hobbies -->
+                <div class="form-group">
+                    <label>Hobbies</label>
+                    <div class="options-group">
+                        <label><input type="checkbox" name="hobby" value="Music"> Music</label>
+                        <label><input type="checkbox" name="hobby" value="Sports"> Sports</label>
+                        <label><input type="checkbox" name="hobby" value="Travel"> Travel</label>
+                        <label><input type="checkbox" name="hobby" value="Movies"> Movies</label>
+                    </div>
+                </div>
+
+                <!-- Source of Income -->
+                <div class="form-group">
+                    <label for="source_income">Source of Income</label>
+                    <select id="source_income">
+                        <option value="Employed">Employed</option>
+                        <option value="Unemployed">Unemployed</option>
+                        <option value="Business">Business</option>
+                    </select>
+                </div>
+
+                <!-- Income (Slider) -->
+                <div class="form-group">
+                    <label>Income</label>
+                    <div class="income-slider-container">
+                        <input type="range" min="0" max="100" value="20" id="income_range" oninput="updateIncome(this.value)">
+                        <span class="income-badge" id="income_val">20K</span>
+                    </div>
+                </div>
+
+                <!-- Upload Profile Picture -->
+                <div class="form-group">
+                    <label for="profile_pic">Upload Profile Picture</label>
+                    <input type="file" id="profile_pic">
+                </div>
+
+                <!-- Age -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" value="18">
+                </div>
+
+                <!-- Bio -->
+                <div class="form-group full-width">
+                    <label for="bio">Bio</label>
